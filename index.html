@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <!-- Boilerplate -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Title / Logo -->
+        <title>Mido : Utility</title>
+        <link rel="icon" href="logo.jpg">
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+
+        <!-- Scripts -->
+        <script src="jquery.slim.min.js" defer></script>
+        <script src="bootstrap.bundle.min.js" defer></script>
+        <script src="script.js" defer></script>
+    </head>
+    
+    <body>
+        <nav class="navbar fixed-top navbar-expand-xl" id="navbar">
+            <img src="logo.jpg" id="logo">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#character-sheet">Character Sheet</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#damage-calculator">Damage Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#music-player">Music Player</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Rulebook</a>
+                    </li>
+                </ul>
+            </div>    
+        </nav>
+        <div class="navigation" id="character-sheet"></div>
+        <div>
+            <div class="d-flex justify-content-around my-5" id="character-sheet-header">
+                <div class="text-center p-2 mx-5 ">
+                    <a class="d-block text-decoration-none section-symbol bs-canvas-pull-button" href="#" id="character-sheet-button-left">
+                        <span class="display-3">&#9776;</span>
+                        <h6>Update</h6>
+                    </a>
+                </div>
+                <div class="flex-grow-1 text-center align-self-center">    	
+                    <h4 class="h4">Character Sheet</h4>
+                    <p>
+                        Click the "Update" button to update your character's information.<br>
+                        Click the "Import / Export" button to load your character from / save your character to a .json file.
+                    </p>            
+                </div>
+                <div class="text-center p-2 mx-5 ">
+                    <a class="d-block text-decoration-none section-symbol bs-canvas-pull-button" href="#" id="character-sheet-button-right">
+                        <span class="display-3">&#9776;</span>
+                        <h6>Import / Export</h6>
+                    </a>
+                </div>
+            </div>
+            <div class="container" id="character-sheet-body">
+                <div class="row text-center">
+                    <div class="col-6">
+                        ...
+                    </div>
+                    <div class="col-6">
+                        ...
+                    </div>
+                </div>
+            </div>
+            <div class="bs-canvas bs-canvas-left position-fixed bg-dark h-100" id="character-sheet-canvas-left">
+                <header class="bs-canvas-header p-3">
+                    <h4 class="d-inline-block text-light mb-0">Update Character</h4>
+                    <button type="button" class="bs-canvas-close close" aria-label="Close"><span aria-hidden="true" class="text-light">&times;</span></button>
+                </header>
+                <div class="bs-canvas-content px-3 py-5">
+                    ...
+                </div>    
+            </div>
+            <div class="bs-canvas bs-canvas-right position-fixed bg-dark h-100" id="character-sheet-canvas-right">
+                <header class="bs-canvas-header p-3 overflow-auto">
+                    <button type="button" class="bs-canvas-close float-left close" aria-label="Close"><span aria-hidden="true" class="text-light">&times;</span></button>
+                    <h4 class="d-inline-block text-light mb-0 float-right">Import / Export Character</h4>
+                </header>
+                <div class="bs-canvas-content px-3 py-5">
+                    ...
+                </div>    
+            </div>
+        </div>
+        <div class="navigation" id="damage-calculator"></div>
+        <div>
+            <div class="d-flex justify-content-around my-5 entity-info-navbar" id="damage-calculator-header">
+                <div class="text-center p-2 mx-5 ">
+                    <a class="d-block text-decoration-none section-symbol bs-canvas-pull-button" href="#" id="damage-calculator-button-left">
+                        <span class="display-3">&#9776;</span>
+                        <h6>Entity 1</h6>
+                    </a>
+                </div>
+                <div class="flex-grow-1 text-center align-self-center">    	
+                    <h4 class="h4">Damage Calculator</h4>
+                    <p>
+                        Click the "Entity 1" and/or "Entity 2" buttons to update situations for damage calculation.<br>
+                        <br>
+                    </p>            
+                </div>
+                <div class="text-center p-2 mx-5 entity-info-navbar">
+                    <a class="d-block text-decoration-none section-symbol bs-canvas-pull-button" href="#" id="damage-calculator-button-right">
+                        <span class="display-3">&#9776;</span>
+                        <h6>Entity 2</h6>
+                    </a>
+                </div>
+            </div>
+            <div class="container" id="damage-calculator-body">
+                <div class="row text-center">
+                    <div class="col-6">
+                        ...
+                    </div>
+                    <div class="col-6">
+                        ...
+                    </div>
+                </div>
+            </div>
+            <div class="bs-canvas bs-canvas-left position-fixed bg-dark h-100" id="damage-calculator-canvas-left">
+                <header class="bs-canvas-header p-3">
+                    <h4 class="d-inline-block text-light mb-0">Entity 1 Information</h4>
+                    <button type="button" class="bs-canvas-close close" aria-label="Close"><span aria-hidden="true" class="text-light">&times;</span></button>
+                </header>
+                <div class="bs-canvas-content px-3 py-5">
+                    ...
+                </div>    
+            </div>
+            <div class="bs-canvas bs-canvas-right position-fixed bg-dark h-100" id="damage-calculator-canvas-right">
+                <header class="bs-canvas-header p-3 overflow-auto">
+                    <button type="button" class="bs-canvas-close float-left close" aria-label="Close"><span aria-hidden="true" class="text-light">&times;</span></button>
+                    <h4 class="d-inline-block text-light mb-0 float-right">Entity 2 Information</h4>
+                </header>
+                <div class="bs-canvas-content px-3 py-5">
+                    ...
+                </div>    
+            </div>
+        </div>
+        <div class="navigation" id="music-player"></div>
+        <div>
+            <div class="d-flex justify-content-around my-5" id="music-player-header">
+                <div class="text-center p-2 mx-5">
+                    <a class="d-block text-decoration-none section-symbol"></a>
+                </div>
+                <div class="flex-grow-1 text-center align-self-center">    	
+                    <h4 class="h4">Music Player</h4>
+                    <p>
+                        Enter a code for this session's area or battle themes.<br>
+                        <br>
+                    </p>            
+                </div>
+                <div class="text-center p-2 mx-5">
+                    <a class="d-block text-decoration-none section-symbol"></a>
+                </div>
+            </div>
+            <div class="container" id="music-player-body">
+                <div class="row text-center">
+                    <div class="col-6">
+                        ...
+                    </div>
+                    <div class="col-6">
+                        ...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

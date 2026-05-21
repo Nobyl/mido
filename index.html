@@ -27,13 +27,13 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#character-sheet">Character Sheet</a>
+                        <a class="nav-link" href="#characterSheet">Character Sheet</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#damage-calculator">Damage Calculator</a>
+                        <a class="nav-link" href="#damageCalculator">Damage Calculator</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#music-player">Music Player</a>
+                        <a class="nav-link" href="#musicPlayer">Music Player</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Rulebook</a>
@@ -41,11 +41,11 @@
                 </ul>
             </div>    
         </nav>
-        <div class="navigation" id="character-sheet"></div>
+        <div class="navigation" id="characterSheet"></div>
         <div>
-            <div class="d-flex justify-content-around my-5" id="character-sheet-header">
+            <div class="d-flex justify-content-around my-5" id="characterSheetHeader">
                 <div class="text-center p-2 mx-5 ">
-                    <a class="d-block text-decoration-none section-symbol bs-canvas-pull-button" href="#" id="character-sheet-button-left">
+                    <a class="d-block text-decoration-none section-symbol bs-canvas-pull-button" href="#" id="characterSheetButtonLeft">
                         <span class="display-3">&#9776;</span>
                         <h6>Update</h6>
                     </a>
@@ -58,46 +58,441 @@
                     </p>            
                 </div>
                 <div class="text-center p-2 mx-5 ">
-                    <a class="d-block text-decoration-none section-symbol bs-canvas-pull-button" href="#" id="character-sheet-button-right">
+                    <a class="d-block text-decoration-none section-symbol bs-canvas-pull-button" href="#" id="characterSheetButtonRight">
                         <span class="display-3">&#9776;</span>
                         <h6>Import / Export</h6>
                     </a>
                 </div>
             </div>
-            <div class="container" id="character-sheet-body">
-                <div class="row text-center">
-                    <div class="col-6">
-                        ...
+            <div class="container" id="characterSheetBody">
+                <div class="card-columns">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Character Information</h5>
+                            <form>
+                                <div class="form-group row">
+                                    <label for="staticName" class="col-sm-5 col-form-label">Name :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticName" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticArcana" class="col-sm-5 col-form-label">Arcana :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticArcana" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticPersona" class="col-sm-5 col-form-label">Persona :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticPersona" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticLevel" class="col-sm-5 col-form-label">Level :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticLevel" value="test">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div class="col-6">
-                        ...
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Element Resistances</h5>
+                            <form>
+                                <div class="form-group row">
+                                    <label for="staticPhysicalResistance" class="col-sm-5 col-form-label">Physical :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticPhysicalResistance" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticFireResistance" class="col-sm-5 col-form-label">Fire :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticFireResistance" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticIceResistance" class="col-sm-5 col-form-label">Ice :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticIceResistance" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticElectricResistance" class="col-sm-5 col-form-label">Electric :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticElectricResistance" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticWindResistance" class="col-sm-5 col-form-label">Wind :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticWindResistance" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticLightResistance" class="col-sm-5 col-form-label">Light :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticLightResistance" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticDarkResistance" class="col-sm-5 col-form-label">Dark :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticDarkResistance" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticAlmightyResistance" class="col-sm-5 col-form-label">Almighty :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticAlmightyResistance" value="test">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Ailment Resistances</h5>
+                            <form>
+                                <div class="form-group row">
+                                    <label for="staticCharmResistance" class="col-sm-5 col-form-label">Charm :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticCharmResistance" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticSealResistance" class="col-sm-5 col-form-label">Seal :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticSealResistance" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticPanicResistance" class="col-sm-5 col-form-label">Panic :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticPanicResistance" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticPoisonResistance" class="col-sm-5 col-form-label">Poison :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticPoisonResistance" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticSleepResistance" class="col-sm-5 col-form-label">Sleep :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticSleepResistance" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticMirageResistance" class="col-sm-5 col-form-label">Mirage :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticMirageResistance" value="test">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Social Stats</h5>
+                            <form>
+                                <div class="form-group row">
+                                    <label for="staticGuts" class="col-sm-5 col-form-label">Guts :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticGuts" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticKnowledge" class="col-sm-5 col-form-label">Knowledge :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticKnowledge" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticCharm" class="col-sm-5 col-form-label">Charm :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticCharm" value="test">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Combat Stats</h5>
+                            <form>
+                                <div class="form-group row">
+                                    <label for="staticHitPoints" class="col-sm-5 col-form-label">HP :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticHitPoints" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticSpiritPoints" class="col-sm-5 col-form-label">SP :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticSpiritPoints" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticMovementPoints" class="col-sm-5 col-form-label">MP :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticMovementPoints" value="test">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Persona Stats</h5>
+                            <form>
+                                <div class="form-group row">
+                                    <label for="staticStrength" class="col-sm-5 col-form-label">Strength :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticStrength" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticMagic" class="col-sm-5 col-form-label">Magic :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticMagic" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticVitality" class="col-sm-5 col-form-label">Vitality :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticVitality" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticAgility" class="col-sm-5 col-form-label">Agility :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticAgility" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticLuck" class="col-sm-5 col-form-label">Luck :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticLuck" value="test">
+                                    </div>
+                                </div>                              
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Persona Skills</h5>
+                            <form>
+                                <div class="form-group row">
+                                    <label for="staticSkillOne" class="col-sm-5 col-form-label">Skill 1 :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticSkillOne" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticSkillTwo" class="col-sm-5 col-form-label">Skill 2 :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticSkillTwo" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticSkillThree" class="col-sm-5 col-form-label">Skill 3 :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticSkillThree" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticSkillFour" class="col-sm-5 col-form-label">Skill 4 :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticSkillFour" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticSkillFive" class="col-sm-5 col-form-label">Skill 5 :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticSkillFive" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticSkillSix" class="col-sm-5 col-form-label">Skill 6 :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticSkillSix" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticSkillSeven" class="col-sm-5 col-form-label">Skill 7 :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticSkillSeven" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticSkillEight" class="col-sm-5 col-form-label">Skill 8 :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticSkillEight" value="test">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Equipment</h5>
+                            <form>
+                                <div class="form-group row">
+                                    <label for="staticMelee" class="col-sm-5 col-form-label">Melee :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticMelee" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticRanged" class="col-sm-5 col-form-label">Ranged :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticRanged" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticArmor" class="col-sm-5 col-form-label">Armor :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticArmor" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticAccessory" class="col-sm-5 col-form-label">Accessory :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticAccessory" value="test">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Element Affinities</h5>
+                            <form>
+                                <div class="form-group row">
+                                    <label for="staticPhysicalAffinity" class="col-sm-5 col-form-label">Physical :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticPhysicalAffinity" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticFireAffinity" class="col-sm-5 col-form-label">Fire :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticFireAffinity" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticIceAffinity" class="col-sm-5 col-form-label">Ice :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticIceAffinity" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticElectricAffinity" class="col-sm-5 col-form-label">Electric :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticElectricAffinity" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticWindAffinity" class="col-sm-5 col-form-label">Wind :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticWindAffinity" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticLightAffinity" class="col-sm-5 col-form-label">Light :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticLightAffinity" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticDarkAffinity" class="col-sm-5 col-form-label">Dark :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticDarkAffinity" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticAlmightyAffinity" class="col-sm-5 col-form-label">Almighty :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticAlmightyAffinity" value="test">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Ailment Affinities</h5>
+                            <form>
+                                <div class="form-group row">
+                                    <label for="staticCharmAffinity" class="col-sm-5 col-form-label">Charm :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticCharmAffinity" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticSealAffinity" class="col-sm-5 col-form-label">Seal :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticSealAffinity" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticPanicAffinity" class="col-sm-5 col-form-label">Panic :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticPanicAffinity" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticPoisonAffinity" class="col-sm-5 col-form-label">Poison :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticPoisonAffinity" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticSleepAffinity" class="col-sm-5 col-form-label">Sleep :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticSleepAffinity" value="test">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticMirageAffinity" class="col-sm-5 col-form-label">Mirage :</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticMirageResistance" value="test">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="bs-canvas bs-canvas-left position-fixed bg-dark h-100" id="character-sheet-canvas-left">
+            <div class="bs-canvas bs-canvas-left position-fixed bg-dark h-100" id="characterSheetCanvasLeft">
                 <header class="bs-canvas-header p-3">
                     <h4 class="d-inline-block text-light mb-0">Update Character</h4>
                     <button type="button" class="bs-canvas-close close" aria-label="Close"><span aria-hidden="true" class="text-light">&times;</span></button>
                 </header>
                 <div class="bs-canvas-content px-3 py-5">
-                    ...
+                    <button type="button" class="btn btn-secondary btn-block" id="characterSheetUpdateButton">Update</button>
                 </div>    
             </div>
-            <div class="bs-canvas bs-canvas-right position-fixed bg-dark h-100" id="character-sheet-canvas-right">
+            <div class="bs-canvas bs-canvas-right position-fixed bg-dark h-100" id="characterSheetCanvasRight">
                 <header class="bs-canvas-header p-3 overflow-auto">
                     <button type="button" class="bs-canvas-close float-left close" aria-label="Close"><span aria-hidden="true" class="text-light">&times;</span></button>
                     <h4 class="d-inline-block text-light mb-0 float-right">Import / Export Character</h4>
                 </header>
                 <div class="bs-canvas-content px-3 py-5">
-                    ...
+                    <button type="button" class="btn btn-secondary btn-block" id="characterSheetImportButton">Import</button>
+                    <button type="button" class="btn btn-secondary btn-block" id="characterSheetExportButton">Export</button>
                 </div>    
             </div>
         </div>
-        <div class="navigation" id="damage-calculator"></div>
+        <div class="navigation" id="damageCalculator"></div>
         <div>
-            <div class="d-flex justify-content-around my-5 entity-info-navbar" id="damage-calculator-header">
+            <div class="d-flex justify-content-around my-5 entity-info-navbar" id="damageCalculatorHeader">
                 <div class="text-center p-2 mx-5 ">
-                    <a class="d-block text-decoration-none section-symbol bs-canvas-pull-button" href="#" id="damage-calculator-button-left">
+                    <a class="d-block text-decoration-none section-symbol bs-canvas-pull-button" href="#" id="damageCalculatorButtonLeft">
                         <span class="display-3">&#9776;</span>
                         <h6>Entity 1</h6>
                     </a>
@@ -110,13 +505,13 @@
                     </p>            
                 </div>
                 <div class="text-center p-2 mx-5 entity-info-navbar">
-                    <a class="d-block text-decoration-none section-symbol bs-canvas-pull-button" href="#" id="damage-calculator-button-right">
+                    <a class="d-block text-decoration-none section-symbol bs-canvas-pull-button" href="#" id="damageCalculatorButtonRight">
                         <span class="display-3">&#9776;</span>
                         <h6>Entity 2</h6>
                     </a>
                 </div>
             </div>
-            <div class="container" id="damage-calculator-body">
+            <div class="container" id="damageCalculatorBody">
                 <div class="row text-center">
                     <div class="col-6">
                         ...
@@ -126,28 +521,28 @@
                     </div>
                 </div>
             </div>
-            <div class="bs-canvas bs-canvas-left position-fixed bg-dark h-100" id="damage-calculator-canvas-left">
+            <div class="bs-canvas bs-canvas-left position-fixed bg-dark h-100" id="damageCalculatorCanvasLeft">
                 <header class="bs-canvas-header p-3">
                     <h4 class="d-inline-block text-light mb-0">Entity 1 Information</h4>
                     <button type="button" class="bs-canvas-close close" aria-label="Close"><span aria-hidden="true" class="text-light">&times;</span></button>
                 </header>
                 <div class="bs-canvas-content px-3 py-5">
-                    ...
+                    <button type="button" class="btn btn-secondary btn-block" id="damageCalculatorEntityOneUpdateButton">Update</button>
                 </div>    
             </div>
-            <div class="bs-canvas bs-canvas-right position-fixed bg-dark h-100" id="damage-calculator-canvas-right">
+            <div class="bs-canvas bs-canvas-right position-fixed bg-dark h-100" id="damageCalculatorCanvasRight">
                 <header class="bs-canvas-header p-3 overflow-auto">
                     <button type="button" class="bs-canvas-close float-left close" aria-label="Close"><span aria-hidden="true" class="text-light">&times;</span></button>
                     <h4 class="d-inline-block text-light mb-0 float-right">Entity 2 Information</h4>
                 </header>
                 <div class="bs-canvas-content px-3 py-5">
-                    ...
+                    <button type="button" class="btn btn-secondary btn-block" id="damageCalculatorEntityTwoUpdateButton">Update</button>
                 </div>    
             </div>
         </div>
-        <div class="navigation" id="music-player"></div>
+        <div class="navigation" id="musicPlayer"></div>
         <div>
-            <div class="d-flex justify-content-around my-5" id="music-player-header">
+            <div class="d-flex justify-content-around my-5" id="musicPlayerHeader">
                 <div class="text-center p-2 mx-5">
                     <a class="d-block text-decoration-none section-symbol"></a>
                 </div>
@@ -162,7 +557,7 @@
                     <a class="d-block text-decoration-none section-symbol"></a>
                 </div>
             </div>
-            <div class="container" id="music-player-body">
+            <div class="container" id="musicPlayerBody">
                 <div class="row text-center">
                     <div class="col-6">
                         ...

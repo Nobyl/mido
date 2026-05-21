@@ -2,7 +2,7 @@
     outline: 0px solid #736B5E;
 }
 
-body, body * {
+body, body *, .form-control-plaintext {
     color : #E8E6E3;
     background-color: #202324;
 }
@@ -29,8 +29,15 @@ body, body * {
     width : 120px;
 }
 
-#character-sheet-body, #damage-calculator-body, #music-player-body { /* TEMPORARY; DELETE LATER */
-    height : 700px;
+.card-title {
+    margin-bottom: 1.25rem;
+}
+.form-group {
+    margin-bottom: 0;
+}
+
+#damageCalculatorBody, #musicPlayerBody { /* TEMPORARY; DELETE LATER */
+    height : 1000px;
 }
 
 .bs-canvas-overlay {
